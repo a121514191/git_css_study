@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>look-css</title>
+    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="assets/css/default/style.min.css" rel="stylesheet" />
+    <link href="assets/css/shake.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <style>
+        .black_frame {
+            background-color: hsla(0, 0%, 0%, 0.5);
+            border: black 1px solid;
+        }
+
+        .bg_img {
+            background-image: url('img/01.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .demo {
+            animation: Updown 1s infinite alternate;
+        }
+
+        @keyframes Updown1 {
+            from {
+                padding: 8% 13% 8% 13%;
+            }
+
+            to {
+                padding: 16% 13% 0% 13%;
+            }
+        }
+
+        @keyframes Updown {
+            from {
+                padding: 0% 13% 16% 13%;
+            }
+
+            to {
+                padding: 16% 13% 0% 13%;
+            }
+        }
+
+        @keyframes Updown6 {
+            from {
+                padding: 8% 0% 8% 26%;
+            }
+
+            to {
+                padding: 8% 26% 8% 0%;
+            }
+        }
+
+        @keyframes Updown4 {
+            from {
+                padding: 8% 13% 8% 13%;
+            }
+
+            to {
+                padding: 16% 13% 0% 13%;
+            }
+        }
+
+        @keyframes Updown5 {
+            from {
+                padding: 8% 13% 8% 13%;
+            }
+
+            to {
+                padding: 16% 13% 0% 13%;
+            }
+        }
+
+.test{
+    position: relative;
+    height: 700px;
+    background: url(i/pic4.jpg) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.test:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: yellow;
+    opacity: 0.2;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "微軟正黑體";
+    cursor: url('assets/cur/blue_diamond.cur'), auto;
+}
+
+#real_knife:hover{
+    cursor: url('assets/cur/real_knife.cur'), auto;
+}
+#hammer:hover{
+    cursor: url('assets/cur/hammer.cur'), auto;
+}
+#ax:hover{
+    cursor: url('assets/cur/ax.cur'), auto;
+}
+    </style>
+</head>
+
+<body>
+    <div style="height: 100%;" class="container-fluid">
+        <div class="row" style="height: 25%;">
+            <div class="col-4" style="height: 100%;text-align: center;">
+                <h3>選擇武器</h3>
+                <button id='real_knife' onclick="change_weapon(this.id)"> 腥紅菜刀</button>
+                <button id='hammer' onclick="change_weapon(this.id)">聖王錘</button>
+                <button id='ax' onclick="change_weapon(this.id)"> 血腥之斧</button>
+            </div>
+            <div class="col-4" style="height: 100%;">
+                2
+
+            </div>
+            <div class="col-4" style="height: 100%;">
+                3
+            </div>
+        </div>
+        <div class="row" style="height: 50%;">
+            <div class="col-4" style="height: 100%;">
+                4
+            </div>
+            <div class="col-4  demo " style="height: 100%;padding: 8% 13% 8% 13%;">
+                <img class=""  id="hit" src="img/02.png" style="width: 30%;height: 35%; z-index:1;position: absolute; ">
+
+                <img id="hit_anime" src="img/boom.gif"
+                    style="width: 30%;height: 35%; z-index:2;position: absolute;display: none;">
+            </div>
+            <div class="col-4" style="height: 100%;">
+                6
+            </div>
+        </div>
+        <div class="row" style="height: 25%;">
+            <div class="col-4" style="height: 100%;">
+                7
+            </div>
+            <div class="col-4" style="height: 100%;">
+
+                8
+            </div>
+            <div class="col-4" style="height: 100%;">
+                9
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#hit").click(function () {
+            // alert(123)
+            $("#hit_anime").css("display", "block");
+            $("#hit").css("filter", "hue-rotate(70deg)");
+            $("#hit").addClass("shake-crazy");
+
+            setTimeout(function () {
+                $("#hit_anime").css("display", "none");
+                $("#hit").removeClass("shake-crazy");
+                $("#hit").css("filter", "");
+            }, 1000);
+        });
+     
+        function change_weapon(weapon){
+            console.log(weapon);
+            $("body").css("cursor","url('assets/cur/"+weapon+".cur'), auto");
+            $("#hit_anime").attr('src',"img/"+weapon+".gif");
+        }
+    </script>
+</body>
+
+</html>

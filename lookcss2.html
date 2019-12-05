@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>look-css</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4" style="border: 3px solid">
+				<div class="row" style="border: 3px solid">
+					<style>
+						#up-shadow {
+							font-size: 100px;
+							color: #fff;
+							margin-top: 30px;
+							text-align: center;
+							text-shadow: 2px 2px 4px #000;
+						}
+					</style>
+					<div class="col">
+						<p>浮雕效果(字)- </p>
+						<h1 id="up-shadow">浮雕效果</h1>
+					</div>
+				</div>
+				<div class="row" style="border: 3px solid">
+					<style>
+						.box11 {
+							width: 300px;
+							height: 100px;
+							background: #ccc;
+							border-radius: 10px;
+							margin: 10px;
+						}
+
+						.shadow {
+							position: relative;
+							max-width: 270px;
+							box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+								0px 0px 20px rgba(0, 0, 0, 0.1) inset;
+						}
+
+						.shadow::before,
+						.shadow::after {
+							content: "";
+							position: absolute;
+							z-index: -1;
+						}
+
+						.shadow::before,
+						.shadow::after {
+							content: "";
+							position: absolute;
+							z-index: -1;
+							bottom: 15px;
+							left: 10px;
+							width: 50%;
+							height: 20%;
+						}
+
+						.shadow::before,
+						.shadow::after {
+							content: "";
+							position: absolute;
+							z-index: -1;
+							bottom: 15px;
+							left: 10px;
+							width: 50%;
+							height: 20%;
+							box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+							transform: rotate(-3deg);
+						}
+
+						.shadow::after {
+							right: 10px;
+							left: auto;
+							transform: rotate(3deg);
+						}
+
+						div.btn-Emboss01 {
+							display: inline-block;
+							/*如同float進階*/
+							text-align: center;
+							/*置中*/
+							vertical-align: middle;
+							/*垂直置中*/
+							padding: 12px 20px;
+							/*padding*/
+							/* border: 3px solid #a81f12; */
+							/*外框(粗度-類型-顏色)*/
+							border-radius: 10px;
+							/*外框(弧度)-漸層*/
+							background: #fdfdfa;
+							/* background: -webkit-gradient(linear, left top, left bottom, from(#e97121), to(#833609));
+							background: -moz-linear-gradient(top, #e97121, #833609);
+							background: linear-gradient(to bottom, #e97121, #833609); */
+							/* 外光暈 */
+							/* -webkit-box-shadow: #e97121 0px 0px 40px 0px;
+							-moz-box-shadow: #e97121 0px 0px 40px 0px; */
+							box-shadow: 5px 2px 2px 5px #000;
+
+							/*框的陰影*/
+							text-shadow: #833609 0px 0px 2px;
+							/*文字陰影*/
+							font: normal normal bold 25px arial;
+							/*字型*/
+							color: #ffffff;
+							text-decoration: none;
+						}
+
+						/*直接接,等於都會觸發無論hover或是focus*/
+						div.btn-Emboss01:hover,
+						div.btn-Emboss01:focus {
+							border: 3px solid #c07d40;
+							background: #e09652;
+							background: -webkit-gradient(linear, left top, left bottom, from(#e09652), to(#8a5c32));
+							background: -moz-linear-gradient(top, #e09652, #8a5c32);
+							background: linear-gradient(to bottom, #e09652, #8a5c32);
+							color: #ffffff;
+							text-decoration: none;
+						}
+
+						/*點擊按下時*/
+						div.btn-Emboss01:active {
+							background: #734d2a;
+							background: -webkit-gradient(linear, left top, left bottom, from(#734d2a), to(#734d2a));
+							background: -moz-linear-gradient(top, #734d2a, #734d2a);
+							background: linear-gradient(to bottom, #734d2a, #734d2a);
+						}
+
+
+						div.btn02 {
+							display: inline-block;
+							/*如同float進階*/
+							text-align: center;
+							/*置中*/
+							vertical-align: middle;
+							/*垂直置中*/
+							padding: 12px 20px;
+							/*padding*/
+							border: 3px solid #140c8d;
+							/*外框(粗度-類型-顏色)*/
+							border-radius: 10px;
+							/*外框(弧度)-漸層*/
+							background: #10e0fb;
+							background: -webkit-gradient(linear, left top, left bottom, from(#10e0fb), to(#21095a));
+							background: -moz-linear-gradient(top, #10e0fb, #21095a);
+							background: linear-gradient(to bottom, #10e0fb, #21095a);
+							-webkit-box-shadow: #10e0fb 0px 0px 40px 0px;
+							-moz-box-shadow: #10e0fb 0px 0px 40px 0px;
+							box-shadow: #10e0fb 0px 0px 40px 0px;
+							/*框的陰影*/
+							text-shadow: #21095a 0px 0px 2px;
+							/*文字陰影*/
+							font: normal normal bold 25px arial;
+							/*字型*/
+							color: #ffffff;
+							text-decoration: none;
+						}
+
+						/*直接接,等於都會觸發無論hover或是focus*/
+						div.btn02:hover,
+						div.btn02:focus {
+							border: 3px solid #c07d40;
+							background: #e09652;
+							background: -webkit-gradient(linear, left top, left bottom, from(#e09652), to(#8a5c32));
+							background: -moz-linear-gradient(top, #e09652, #8a5c32);
+							background: linear-gradient(to bottom, #e09652, #8a5c32);
+							color: #ffffff;
+							text-decoration: none;
+							-moz-transform: scale(0.8);
+							-webkit-transform: scale(1.2);
+							-o-transform: scale(1.2);
+							-ms-transform: scale(1.2);
+							transform: scale(1.2);
+						}
+
+						/*點擊按下時*/
+						div.btn02:active {
+							background: #734d2a;
+							background: -webkit-gradient(linear, left top, left bottom, from(#734d2a), to(#734d2a));
+							background: -moz-linear-gradient(top, #734d2a, #734d2a);
+							background: linear-gradient(to bottom, #734d2a, #734d2a);
+						}
+
+						.btn001test {
+							border: 3px solid #000000 !important;
+							background: #000000 !important;
+							background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000)) !important;
+							background: -moz-linear-gradient(top, #000000, #000000) !important;
+							background: linear-gradient(to bottom, #000000, #000000) !important;
+						}
+
+						.button {
+							border: 1px solid red;
+							box-shadow: -10px 10px red;
+
+							display: inline-block;
+							margin: 30px;
+							position: relative;
+							outline: none;
+							font-size: 40px;
+							padding: 10px 30px;
+							background-color: #333;
+							font-weight: 700;
+							color: white;
+							letter-spacing: 1px;
+							line-height: 1;
+							text-transform: uppercase;
+							text-align: center;
+						}
+
+						/* create triangle */
+
+						.button::before {
+							content: "";
+							position: absolute;
+							top: -1px;
+							left: -11px;
+							width: 0;
+							height: 0;
+							font-size: 0;
+							line-height: 0%;
+							border-style: solid;
+							border-color: transparent;
+							border-width: 0 0 11px 11px;
+							border-bottom-color: red;
+						}
+
+						.button::after {
+							content: "";
+							position: absolute;
+							right: -1px;
+							bottom: -11px;
+							width: 0;
+							height: 0;
+							font-size: 0;
+							line-height: 0%;
+							border-style: solid;
+							border-color: transparent;
+							border-width: 11px 11px 0 0;
+							border-top-color: red;
+						}
+
+						@keyframes myAnimation2 {
+							0% {
+								margin-bottom: 20px;
+
+								/* background-color: yellow; */
+							}
+
+							50% {
+								margin-top: 0px;
+								/* background-color: red; */
+							}
+
+							100% {
+								margin-top: 40px;
+								/* background-color: blue; */
+							}
+						}
+						.test-dynamic {
+							/* width: 100px;
+							height: 100px; */
+							animation: myAnimation2 1s ease 0s infinite alternate;
+						}
+					</style>
+					<div class="col-12" style="text-align: center;">
+						<h1 id='main-label'>請選擇付款方式</h1>
+						
+					</div>
+					<div class="col-6" style="text-align: center;">
+						<p>btn效果(框) </p>
+						<div class="btn-Emboss01" id="left-btn">
+							<div class="header" style="height: 100px;width: 100px;">
+								<h1></h1>
+							</div>
+						</div>
+						<br>
+						<br>
+					</div>
+					<div class="col-6" style="text-align: center;">
+						<p>btn效果(框) </p>
+						<div class="btn02 test-dynamic " id="right-btn">
+							<div class="header" style="height: 100px;width: 100px;">
+								<h1></h1>
+							</div>
+						</div>
+						<br>
+						<br>
+					</div>
+					
+					<div class="box11 shadow"></div>
+						<a class="button">Gallery</a>
+					<script>
+						$("#left-btn").click(function () {
+							$("#left-btn").addClass("btn001test");
+							$("#right-btn").removeClass("btn001test");
+							var label = document.getElementById('main-label');
+							label.innerText = '直接付款';
+						})
+						$("#right-btn").click(function () {
+							$("#left-btn").removeClass("btn001test");
+							$("#right-btn").addClass("btn001test");
+							var label = document.getElementById('main-label');
+							label.innerText = '尋求玩家付款';
+						})
+					</script>
+				</div>
+
+				<div class="row">
+					<style>
+						@keyframes myAnimation {
+							0% {
+								margin-top: 0px;
+								background-color: yellow;
+							}
+
+							50% {
+								margin-top: 50px;
+								background-color: red;
+							}
+
+							100% {
+								margin-top: 100px;
+								background-color: blue;
+							}
+						}
+
+					
+
+						.test {
+							width: 100px;
+							height: 100px;
+							animation: myAnimation 3s ease 0s infinite alternate;
+						}
+					</style>
+					<!-- <div class="test"></div> -->
+				</div>
+			</div>
+			<div class="col-4" style="border: 3px solid">
+				<div class="row" style="border: 3px solid">
+					<div class="col-12" style="text-align: center;">
+						<br>
+						<div style="height: 120px !important;width: 120px !important;border-radius: 100% 100% 100% 100%;background-image: url(img/user.png);">
+							<img style="width: 100%;" src="img/border-test.svg" >
+						</div>
+						<br>
+					</div>
+				
+				</div>
+			</div>
+			<div class="col-4" style="border: 3px solid">
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+</body>
+
+</html>
